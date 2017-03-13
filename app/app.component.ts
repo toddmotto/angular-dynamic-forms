@@ -25,17 +25,17 @@ export class AppComponent implements AfterViewInit {
   config: FieldConfig[] = [
     {
       type: 'input',
-      label: 'Username',
-      name: 'username',
-      placeholder: 'Enter your username..',
+      label: 'Full name',
+      name: 'name',
+      placeholder: 'Enter your name',
       validation: [Validators.required, Validators.minLength(4)]
     },
     {
       type: 'select',
-      label: 'Select',
-      name: 'test',
-      options: ['Advert', 'Word of mouth', 'Other'],
-      placeholder: 'Select an option..',
+      label: 'Favourite Food',
+      name: 'food',
+      options: ['Pizza', 'Hot Dogs', 'Knakworstje', 'Coffee'],
+      placeholder: 'Select an option',
       validation: [Validators.required]
     },
     {
@@ -55,7 +55,7 @@ export class AppComponent implements AfterViewInit {
     });
 
     this.form.setDisabled('submit', true);
-    this.form.setValue('username', 'Todd Motto');
+    this.form.setValue('name', 'Todd Motto');
   }
 
   submit(value: {[name: string]: any}) {
