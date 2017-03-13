@@ -12,7 +12,12 @@
 
 > You can follow the [tutorial here](https://toddmotto.com/angular-dynamic-components-forms)
 
-To get started, first of all clone this repo into a folder on your computer.
+
+### Running the seed or final project
+
+* To get started with the seed project, [clone this repo](https://github.com/toddmotto/angular-dynamic-forms/tree/seed).
+
+* To run the final project, [clone this repo](https://github.com/toddmotto/angular-dynamic-forms).
 
 Once you've cloned the repo, install all the dependencies by running:
 
@@ -34,4 +39,4 @@ yarn start
 npm start
 ```
 
-This will start up webpack and a local development server at http://localhost:3000.
+This will start up webpack and a local development server at [localhost:3000](http://localhost:3000).
