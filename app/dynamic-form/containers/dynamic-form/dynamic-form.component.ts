@@ -78,21 +78,25 @@ export class DynamicFormComponent implements OnChanges, OnInit {
   }
 
   setDisabled(name: string, disable: boolean) {
-    if (this.form.controls[name]) {
-      const method = disable ? 'disable': 'enable';
-      this.form.controls[name][method]();
-      return;
-    }
-
-    this.config = this.config.map((item) => {
-      if (item.name === name) {
-        item.disabled = disable;
+    setTimeout(() => {
+      if (this.form.controls[name]) {
+        const method = disable ? 'disable': 'enable';
+        this.form.controls[name][method]();
+        return;
       }
-      return item;
-    });
+
+      this.config = this.config.map((item) => {
+        if (item.name === name) {
+          item.disabled = disable;
+        }
+        return item;
+      });
+    }, 0);
   }
 
   setValue(name: string, value: any) {
-    this.form.controls[name].setValue(value, {emitEvent: true});
+    setTimeout(() => {
+      this.form.controls[name].setValue(value, {emitEvent: true});
+    }, 0);
   }
 }
